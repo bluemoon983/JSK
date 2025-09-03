@@ -23,8 +23,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
-      body: Center(child: const Text('Welcome to JSK App!')),
+      backgroundColor: Colors.grey,
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Enter text',
+          ),
+        ),
+      ),
     );
   }
 }
