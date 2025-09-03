@@ -12,7 +12,7 @@ class SearchTextField extends StatelessWidget {
       controller: controller,
       onChanged: onChanged,
       decoration: InputDecoration(
-        hintText: "Search by Player, Team",
+        hintText: "플레이어 검색",
         hintStyle: const TextStyle(
           color: Color(0xFF5C5C66), // 회색 톤
         ),
@@ -25,9 +25,9 @@ class SearchTextField extends StatelessWidget {
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 12),
           child: Text(
-            ".GG",
+            ".JCK",
             style: TextStyle(
-              color: Colors.red.shade600,
+              color: const Color.fromARGB(255, 245, 16, 0),
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),

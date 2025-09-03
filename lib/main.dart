@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jck/widget/textfiled/search_textfiled.dart';
 
 void main() {
   runApp(const JSKApp());
@@ -24,13 +25,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Enter text',
-          ),
+
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(24, 74, 24, 56),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [SearchTextField()],
         ),
       ),
     );
