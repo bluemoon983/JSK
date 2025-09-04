@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jck/presentation/%08main/widget/card/match_card.dart';
 import 'package:jck/presentation/%08main/widget/card/state_card.dart';
 import 'package:jck/presentation/%08main/widget/textfiled/search_textfiled.dart';
 
@@ -108,9 +109,19 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10), // 카드 안쪽 전체 여백
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [Row(children: [
+                      children: [
+                        Row(
+                          children: [
+                            MatchCard(
+                              time: "01:00",
+
+                              onTap: () {
+                                print("MatchCard 클릭됨");
+                              },
+                            ),
                           ],
-                        )],
+                        ),
+                      ],
                     ),
                   ),
                 ),
