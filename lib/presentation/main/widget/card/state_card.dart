@@ -16,7 +16,7 @@ class StatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0xFF2A2A3D),
+        color: const Color(0xFF2B2B34),
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(12),
