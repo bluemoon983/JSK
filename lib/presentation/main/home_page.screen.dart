@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_passive.dart';
-import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_spell.dart';
 import 'package:jck/presentation/%08main/widget/DDRAGON/feats_image.dart';
 import 'package:jck/presentation/%08main/widget/DDRAGON/item_image.dart';
 import 'package:jck/presentation/%08main/widget/card/match_card.dart';
