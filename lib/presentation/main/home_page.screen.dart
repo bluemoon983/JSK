@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_passive.dart';
+import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_spell.dart';
+import 'package:jck/presentation/%08main/widget/DDRAGON/feats_image.dart';
+import 'package:jck/presentation/%08main/widget/DDRAGON/item_image.dart';
 import 'package:jck/presentation/%08main/widget/card/match_card.dart';
 import 'package:jck/presentation/%08main/widget/card/state_card.dart';
+import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_image.dart';
 import 'package:jck/presentation/%08main/widget/textfiled/search_textfiled.dart';
 
 class HomePage extends StatelessWidget {
@@ -113,8 +118,17 @@ class HomePage extends StatelessWidget {
                         Row(
                           children: [
                             MatchCard(
-                              time: "01:00",
-
+                              time: "15:57",
+                              onTap: () {
+                                print("MatchCard 클릭됨");
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            MatchCard(
+                              time: "88:84",
                               onTap: () {
                                 print("MatchCard 클릭됨");
                               },
@@ -125,6 +139,32 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+                Text(
+                  "밴픽 챔피언 순위",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 30,
+                    color: Colors.white,
+                  ),
+                ),
+
+                Image.network(
+                  ChampionImage.getUrl("KSante"),
+                  width: 70,
+                  height: 70,
+                ),
+
+                Image.network(
+                  ChampionPassive.getUrl("ZedP"),
+                  width: 70,
+                  height: 70,
+                ),
+                Image.network(
+                  FeatsImage.getUrl("Blue_First_Blood_1"),
+                  width: 70,
+                  height: 70,
+                ),
+                Image.network(ItemImage.getUrl("6665"), width: 70, height: 70),
               ],
             ),
           ],

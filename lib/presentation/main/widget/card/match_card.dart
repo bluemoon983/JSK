@@ -26,7 +26,7 @@ class MatchCard extends StatelessWidget {
                 style: const TextStyle(color: Colors.white, fontSize: 14),
               ),
               Row(
-                spacing: 42,
+                spacing: 40,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
