@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 class SearchTextField extends StatelessWidget {
   final TextEditingController? controller;
   final ValueChanged<String>? onChanged;
+  final ValueChanged<String>? onSubmitted;
 
-  const SearchTextField({super.key, this.controller, this.onChanged});
+  const SearchTextField({
+    super.key,
+    this.controller,
+    this.onChanged,
+    this.onSubmitted,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +19,7 @@ class SearchTextField extends StatelessWidget {
       onChanged: onChanged,
       decoration: InputDecoration(
         hintText: "플레이어 검색",
-        hintStyle: const TextStyle(
-          color: Color(0xFF5C5C66), // 회색 톤
-        ),
+        hintStyle: const TextStyle(color: Color(0xFF5C5C66)),
         filled: true,
         fillColor: Colors.white,
         contentPadding: const EdgeInsets.symmetric(
