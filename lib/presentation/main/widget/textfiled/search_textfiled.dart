@@ -17,6 +17,7 @@ class SearchTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       onChanged: onChanged,
+      onSubmitted: onSubmitted,
       decoration: InputDecoration(
         hintText: "플레이어 검색",
         hintStyle: const TextStyle(color: Color(0xFF5C5C66)),

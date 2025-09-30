@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jck/presentation/%08main/ban_pick_page.dart';
+import 'package:jck/presentation/%08main/search_result_page.dart';
 import 'package:jck/presentation/%08main/widget/DDRAGON/Champ/champion_image.dart';
 import 'package:jck/presentation/%08main/widget/card/ban_pick_card.dart';
 import 'package:jck/presentation/%08main/widget/card/match_card.dart';
@@ -71,7 +72,18 @@ class HomeContent extends StatelessWidget {
         spacing: 40,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SearchTextField(),
+          SearchTextField(
+            onSubmitted: (query) {
+              if (query.isNotEmpty) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SearchResultPage(query: query),
+                  ),
+                );
+              }
+            },
+          ),
           Column(
             spacing: 10,
             crossAxisAlignment: CrossAxisAlignment.start,
