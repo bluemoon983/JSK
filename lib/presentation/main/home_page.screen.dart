@@ -74,14 +74,22 @@ class HomeContent extends StatelessWidget {
         children: [
           SearchTextField(
             onSubmitted: (query) {
-              if (query.isNotEmpty) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SearchResultPage(query: query),
+              if (query.trim().isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("플레이어 이름을 입력해주세요."),
+                    backgroundColor: Color.fromARGB(255, 125, 13, 5),
+                    duration: Duration(seconds: 2),
                   ),
                 );
+                return;
               }
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SearchResultPage(query: query),
+                ),
+              );
             },
           ),
           Column(
