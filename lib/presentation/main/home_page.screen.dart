@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: "선수 통계"),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_sharp),
-            label: "챔프통계",
+            label: "챔프 통계",
           ),
         ],
       ),
