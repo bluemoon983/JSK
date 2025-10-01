@@ -118,7 +118,7 @@ class HomeContent extends StatelessWidget {
                           Expanded(
                             child: StatCard(
                               title: "최단 게임",
-                              value: "24:47",
+                              value: "15:57",
                               icon: Icons.timer,
                             ),
                           ),
