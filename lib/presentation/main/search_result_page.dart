@@ -10,13 +10,24 @@ class SearchResultPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF1C1C1F),
       appBar: AppBar(
-        title: Text("'$query' 검색 결과"),
-        backgroundColor: const Color(0xFF31313C),
+        backgroundColor: const Color(0xFF1C1C1F),
+
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(54, 14, 24, 56),
         child: Text(
-          "검색어: $query",
-          style: const TextStyle(color: Colors.white, fontSize: 24),
+          "김준혁",
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
